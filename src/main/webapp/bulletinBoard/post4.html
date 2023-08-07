@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../../resources/css/bulletinBoard/post.css">
+        <link rel="stylesheet" href="../../resources/css/reset.css">
+    <title>자유게시판 게시물</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <header>
+      </header>
+      <main>
+        <div class="top">
+          <img src="../../resources/images/components/logoimage2.png" alt="로고">
+          <h2>자유 게시판</h2>
+        </div>
+
+        <div class="post-container">
+            <h2 class="post-title">난 갤럭시 폴드만 쓴다</h2>
+            <p class="post-details">작성자: 빌게이츠 | 작성시간: 2023-06-06 12:00:00</p>
+            <div class="post-content">
+              <img src="../../resources/images/postPhoto4.png" alt="포스트이미지">
+              <p>우린 깐부니깐</p>
+            </div>
+          </div>
+          <div class="bottom">
+            <p>추천 수  <span id="recommendCount">45</span></p>
+            <button class="recommend-button" onclick="incrementRecommendCount()">추천하기</button>
+            <a href="../bulletinBoard/freeBoard.html"><button>글목록</button></a>
+          </div>
+        
+      </main>
+      <footer>
+
+      </footer>
+    </div>
+    <script>
+        function loadHTML(url, element) {
+              const xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                  if (this.readyState === 4 && this.status === 200) {
+                      const content = this.responseText;
+                      element.innerHTML = content;
+
+                      // 포함된 자바스크립트 코드 실행
+                      const scriptTags = element.getElementsByTagName("script");
+                      for (var i = 0; i < scriptTags.length; i++) {
+                          eval(scriptTags[i].innerText);
+                      }
+                  }
+              };
+              xhttp.open("GET", url, true);
+              xhttp.send();
+          } 
+
+          document.addEventListener("DOMContentLoaded", function() {
+              const headerElement = document.querySelector("header");
+              loadHTML("../components/header.html", headerElement);
+
+              const footerElement = document.querySelector("footer");
+              loadHTML("../components/footer.html", footerElement);
+          })
+
+
+          function incrementRecommendCount() {
+                document.querySelector("#recommendCount").innerText = "46";
+          }        
+    </script>
+  </body>
+</html>

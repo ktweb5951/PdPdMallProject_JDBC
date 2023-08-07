@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../resources/css/market/marketPricePage.css">
+        <link rel="stylesheet" href="../../resources/css/reset.css">
+        <title>시세조회 페이지</title>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+
+            </header>
+            <main>
+                <div class="top-container">
+                    <div class="dateDiv">
+                    </div>
+                    <div>
+                        <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table id="myTable">
+                        <thead class="table-header">
+                            <tr>
+                                <th>제품명</th>
+                                <th>모델명</th>
+                                <th>통신사</th>
+                                <th>중고시세</th>
+                                <th>출시일</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                            <tr>
+                                <td>아이폰14프로 (512GB)</td>
+                                <td>A2890</td>
+                                <td>자급제</td>
+                                <td>1,687,000</td>
+                                <td>2022-10-07</td>
+                            </tr>
+                            <tr>
+                                <td>아이폰14프로맥스 (256GB)</td>
+                                <td>A2894</td>
+                                <td>자급제</td>
+                                <td>1,468,000</td>
+                                <td>2022-10-07</td>
+                            </tr>
+                            <tr>
+                                <td>아이폰14프로맥스 (128GB)</td>
+                                <td>A2894</td>
+                                <td>자급제</td>
+                                <td>1,371,000</td>
+                                <td>2022-10-07</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23플러스 (512GB)</td>
+                                <td>SM-S916N</td>
+                                <td>SKT</td>
+                                <td>1,350,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23울트라 (512GB)</td>
+                                <td>SM-S918N</td>
+                                <td>자급제</td>
+                                <td>1,316,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+                            <tr>
+                                <td>아이폰14프로 (256GB)</td>
+                                <td>A2890</td>
+                                <td>자급제</td>
+                                <td>1,299,000</td>
+                                <td>2022-10-07</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23울트라 (256GB)</td>
+                                <td>SM-S918N</td>
+                                <td>자급제</td>
+                                <td>1,261,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시Z폴드4 (256GB)</td>
+                                <td>SM-F936N</td>
+                                <td>KT</td>
+                                <td>1,255,000</td>
+                                <td>2022-08-26</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23울트라 (512GB)</td>
+                                <td>SM-S918N</td>
+                                <td>SKT</td>
+                                <td>1,252,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23울트라 (256GB)</td>
+                                <td>SM-S918N</td>
+                                <td>SKT</td>
+                                <td>1,237,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23울트라 (512GB)</td>
+                                <td>SM-S918N</td>
+                                <td>KT</td>
+                                <td>1,220,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23울트라 (512GB)</td>
+                                <td>SM-S918N</td>
+                                <td>LG U+</td>
+                                <td>1,204,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+                            <tr>
+                                <td>아이폰13 프로 맥스 (256GB)</td>
+                                <td>A2643</td>
+                                <td>자급제</td>
+                                <td>1,204,000</td>
+                                <td>2021-10-08</td>
+                            </tr>
+                            <tr>
+                                <td>아이폰14프로 (128GB)</td>
+                                <td>A2890</td>
+                                <td>자급제</td>
+                                <td>1,190,000</td>
+                                <td>2022-10-07</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23울트라 (256GB)</td>
+                                <td>SM-S918N</td>
+                                <td>LG U+</td>
+                                <td>1,159,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시Z폴드4 (256GB)</td>
+                                <td>SM-F936N</td>
+                                <td>SKT</td>
+                                <td>1,114,000</td>
+                                <td>2022-08-26</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23울트라 (256GB)</td>
+                                <td>SM-S918N</td>
+                                <td>KTF</td>
+                                <td>1,100,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+                            <tr>
+                                <td>아이폰13 프로 맥스 (128GB)</td>
+                                <td>A2643</td>
+                                <td>자급제</td>
+                                <td>1,095,000</td>
+                                <td>2021-10-08</td>
+                            </tr>
+                            <tr>
+                                <td>아이폰14플러스 (256GB)</td>
+                                <td>A2886</td>
+                                <td>자급제</td>
+                                <td>1,049,000</td>
+                                <td>2022-10-07</td>
+                            </tr>
+                            <tr>
+                                <td>아이폰13 프로 (512GB)</td>
+                                <td>A2638</td>
+                                <td>자급제</td>
+                                <td>1,031,000</td>
+                                <td>2021-10-08</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23플러스 (256GB)</td>
+                                <td>SM-S916N</td>
+                                <td>SKT</td>
+                                <td>1,022,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23 (512GB)</td>
+                                <td>SM-S911N</td>
+                                <td>KTF</td>
+                                <td>1,000,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+                            <tr>
+                                <td>아이폰14 (256GB)</td>
+                                <td>A2882</td>
+                                <td>자급제</td>
+                                <td>992,000</td>
+                                <td>2022-10-07</td>
+                            </tr>
+                            <tr>
+                                <td>아이폰13 프로 (256GB)</td>
+                                <td>A2638</td>
+                                <td>자급제</td>
+                                <td>989,000</td>
+                                <td>2021-10-08</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23플러스 (256GB)</td>
+                                <td>SM-S916N</td>
+                                <td>자급제</td>
+                                <td>983,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+                            <tr>
+                                <td>아이폰13 프로 (128GB)</td>
+                                <td>A2638</td>
+                                <td>자급제</td>
+                                <td>973,000</td>
+                                <td>2021-10-08</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23 (512GB)</td>
+                                <td>SM-S911N</td>
+                                <td>자급제</td>
+                                <td>953,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23플러스 (512GB)</td>
+                                <td>SM-S916N</td>
+                                <td>LG U+</td>
+                                <td>949,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23플러스 (256GB)</td>
+                                <td>SM-S916N</td>
+                                <td>LG U+</td>
+                                <td>941,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+                            <tr>
+                                <td>아이폰14플러스 (128GB)</td>
+                                <td>A2886</td>
+                                <td>자급제</td>
+                                <td>926,000</td>
+                                <td>2022-10-07</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23 (512GB)</td>
+                                <td>SM-S911N</td>
+                                <td>SKT</td>
+                                <td>910,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23 (256GB)</td>
+                                <td>SM-S911N</td>
+                                <td>LG U+</td>
+                                <td>902,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+                            <tr>
+                                <td>갤럭시S23 (256GB)</td>
+                                <td>SM-S911N</td>
+                                <td>KTF</td>
+                                <td>899,000</td>
+                                <td>2023-02-17</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+    
+                    
+                        
+                </div>
+            </main>
+            <footer>
+
+            </footer>
+        </div>
+        <script>
+            //헤더 푸터 가져오기
+            function loadHTML(url, element) {
+                const xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState === 4 && this.status === 200) {
+                        const content = this.responseText;
+                        element.innerHTML = content;
+
+                        const scriptTags = element.getElementsByTagName("script");
+                        for (var i = 0; i < scriptTags.length; i++) {
+                                eval(scriptTags[i].innerText);
+                        }
+                    }
+                };
+                xhttp.open("GET", url, true);
+                xhttp.send();
+            }
+
+            document.addEventListener("DOMContentLoaded", function() {
+                const headerElement = document.querySelector("header");
+                loadHTML("/components/header.jsp", headerElement);
+
+                const footerElement = document.querySelector("footer");
+                loadHTML("/components/footer.jsp", footerElement);
+
+            });
+
+            const searchInput = document.getElementById("searchInput");
+            const table = document.getElementById("myTable");
+
+            searchInput.addEventListener("keyup", function(event) {
+                const filter = event.target.value.toLowerCase();
+                const rows = table.getElementsByTagName("tr");
+
+                for (let i = 1; i < rows.length; i++) {
+                    const cells = rows[i].getElementsByTagName("td");
+                    let shouldHide = true;
+
+                    for (let j = 0; j < cells.length; j++) {
+                        const cellValue = cells[j].textContent.toLowerCase();
+                        if (cellValue.indexOf(filter) > -1) {
+                        shouldHide = false;
+                        break;
+                        }
+                    }
+
+                    if (shouldHide) {
+                        rows[i].style.display = "none";
+                    } else {
+                        rows[i].style.display = "";
+                    }
+                }
+            });
+
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const day = String(today.getDate()).padStart(2, '0');
+
+            const dateStr = year + "-" + month + "-" + day + "(오늘의 시세)" ;
+            const dateDiv = document.querySelector(".dateDiv");
+            dateDiv.textContent = dateStr;
+    </script>
+
+        </script>
+    </body>
+</html>

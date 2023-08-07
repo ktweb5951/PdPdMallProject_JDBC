@@ -1,0 +1,91 @@
+    <!DOCTYPE html>
+    <html>
+        <head>
+        <title>채팅 애플리케이션</title>
+        <link rel="stylesheet" type="text/css" href="../../resources/css/market/purcahseChat.css">
+        <!DOCTYPE html>
+<html>
+<head>
+    <title>Chat App</title>
+
+</head>
+<body>
+    <div id="container">
+        <div class="top">
+            <div>판매자 : 호틀님(dwdw***)</div>
+            <div>판매점수 : 4.5점 | 구매점수 : 4점</div>
+            <div><a href="#">🚨신고하기</a> | <a href="#">차단하기</a> | <a href="#">알림끄기</a>
+        </div>
+        <div class="chat-container">
+            <div id="chat-messages">
+
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" id="chat-input" class="chat-input" placeholder="메시지를 입력하세요">
+            <button onclick="sendMessage()" class="chat-send-button">전송</button>
+        </div>
+        <div>
+            <button class="chat-send-button" onclick="reservationBtn();">예약하기</button>
+            <button class="chat-send-button" onclick="openReviewPage();">구매확정</button>
+        </div>
+    </div>
+    <script>
+        // 메시지 전송 버튼 클릭 시 이벤트 처리
+        document.getElementById('send-button').addEventListener('click', function() {
+            sendMessage();
+        });
+
+        // 엔터 키 입력 시 메시지 전송
+        document.getElementById('chat-input').addEventListener('keyup', function(event) {
+            if (event.keyCode === 13) {
+                sendMessage();
+            }
+        });
+
+        // 메시지 전송 함수
+        function sendMessage() {
+            var messageInput = document.getElementById('chat-input');
+            var message = messageInput.value;
+
+            if (message.trim() !== '') {
+                var chatMessages = document.getElementById('chat-messages');
+                var messageElement = document.createElement('div');
+                messageElement.classList.add('chat-message', 'user-message');
+                messageElement.textContent = message;
+                chatMessages.appendChild(messageElement);
+
+                messageInput.value = '';
+                messageInput.focus();
+
+                adjustBubbleSize(messageElement);
+
+
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+        }
+
+            function addMessage(message, isUser) {
+                const chatMessages = document.getElementById('chat-messages');
+                const messageContainer = document.createElement('div');
+                messageContainer.classList.add('chat-message');
+                if (isUser) {
+                    messageContainer.classList.add('user-message');
+                    messageContainer.classList.add('right-align');
+                }
+                messageContainer.textContent = message;
+                chatMessages.appendChild(messageContainer);
+            }
+
+            function reservationBtn(){
+                alert("예약이 완료되었습니다. 판매자와 날짜 및 시간을 조율하세요");
+            }
+
+            function openReviewPage() {
+            window.open("./reviewPage.html", "_blank", "width=400,height=400");
+        }
+
+
+    </script>
+</body>
+</html>

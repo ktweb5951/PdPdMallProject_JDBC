@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../resources/css/market/salesPage.css">
+        <link rel="stylesheet" href="../../resources/css/reset.css">
+        <title>판매 등록 페이지</title>
+    </head>
+    <body>
+        <div id="container">
+            <header sales-container>
+    
+            </header>
+            <span>판매등록</span>
+            <main>
+                <section id="salesArea1">
+                    <div>
+                        <div class="itemName">모델명</div>
+                        <div><input type="text" id="modelInput"><button onclick="showModelPopup()">검색</button></div>
+                    </div>
+                    <div>
+                        <div class="itemName">판매금액</div>
+                        <div><input type="text"><button class="marketPriceBtn" onclick="marketPriceBtn()">시세보기</button></a></div>
+                    </div>
+                    <div>
+                        <div class="itemName">판매유형</div>
+                        <div>
+                            <select>
+                                <option value="direct">직거래</option>
+                                <option value="delivery">택배거래</option>
+                                <option value="purchasing">판다대리</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+                <section id="salesArea2">
+                    <div class="itemName">사진등록(정면,후면,배터리 성능 필수)</div>
+                    <div id="imgBox">
+                    <div class="attachedArea">
+                        <div><sup>*</sup>정면샷</div>
+                        <div class="pictureArea">
+                        <img id="frontImage" class="uploadedImage" src="../../resources/images/components/pngwing.com.png" alt="정면샷">
+                        </div>
+                        <div>
+                        <button onclick="document.getElementById('frontInput').click()">사진첨부</button>
+                        <input type="file" id="frontInput" accept="image/*" style="display: none;" onchange="handleFileSelect(event, 'frontImage')">
+                        </div>
+                    </div>
+                    <div class="attachedArea">
+                        <div><sup>*</sup>후면샷</div>
+                        <div class="pictureArea">
+                        <img id="rearImage" class="uploadedImage" src="../../resources/images/components/pngwing.com.png" alt="후면샷">
+                        </div>
+                        <div>
+                        <button onclick="document.getElementById('rearInput').click()">사진첨부</button>
+                        <input type="file" id="rearInput" accept="image/*" style="display: none;" onchange="handleFileSelect(event, 'rearImage')">
+                        </div>
+                    </div>
+                    <div class="attachedArea">
+                        <div><sup>*</sup>배터리성능</div>
+                        <div class="pictureArea">
+                        <img id="batteryImage" class="uploadedImage" src="../../resources/images/components/pngwing.com.png" alt="배터리성능">
+                        </div>
+                        <div>
+                        <button onclick="document.getElementById('batteryInput').click()">사진첨부</button>
+                        <input type="file" id="batteryInput" accept="image/*" style="display: none;" onchange="handleFileSelect(event, 'batteryImage')">
+                        </div>
+                    </div>
+                    <div class="attachedArea">
+                        <div>추가사진</div>
+                        <div class="pictureArea">
+                        <img id="additionalImage1" class="uploadedImage" src="../../resources/images/components/pngwing.com.png" alt="추가사진">
+                        </div>
+                        <div>
+                        <button onclick="document.getElementById('additionalInput1').click()">사진첨부</button>
+                        <input type="file" id="additionalInput1" accept="image/*" style="display: none;" onchange="handleFileSelect(event, 'additionalImage1')">
+                        </div>
+                    </div>
+                    <div class="attachedArea">
+                        <div>추가사진</div>
+                        <div class="pictureArea">
+                        <img id="additionalImage2" class="uploadedImage" src="../../resources/images/components/pngwing.com.png" alt="추가사진">
+                        </div>
+                        <div>
+                        <button onclick="document.getElementById('additionalInput2').click()">사진첨부</button>
+                        <input type="file" id="additionalInput2" accept="image/*" style="display: none;" onchange="handleFileSelect(event, 'additionalImage2')">
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <section  id="salesArea3">
+
+                    <div class="area3Div">
+                        <div class="itemName">자가진단</div>
+                        <table>
+                            <tr>
+                                <th>제품상태</th>
+                                <td>신품</td>
+                                <td>s급</td>
+                                <td>a급</td>
+                                <td>b급</td>
+                            </tr>
+                            <tr>
+                                <th>구성상품</th>
+                                <td>풀박스</td>
+                                <td>일부누락</td>
+                                <td>단품</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>기변상태</th>
+                                <td>확정기변</td>
+                                <td>유심기변</td>
+                                <td>미확인</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>선택약정</th>
+                                <td>25%할인</td>
+                                <td>약정불가</td>
+                                <td>미확인</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>보증기간</th>
+                                <td>보증가능</td>
+                                <td>기간종료</td>
+                                <td>미확인</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>용량</th>
+                                <td>64GB</td>
+                                <td>128GB</td>
+                                <td>256GB</td>
+                                <td>512GB</td>
+                            </tr>
+                            <tr>
+                                <th>통신사</th>
+                                <td>KT</td>
+                                <td>SKT</td>
+                                <td>LG</td>
+                                <td>자급제</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="area3Div">
+                        <div class="itemName">물품설명</div>
+                        <textarea  id="proctDesc" cols="70" rows="20"></textarea>
+                    </div>
+                </section>
+                <section id="salesArea4">
+                    <button onclick="registerBtn();">판매등록</button>
+                    <button>취소</button>
+                </section>
+
+            </main> 
+            <footer>
+                
+            </footer>
+            <div id="modelModal" class="modal">
+                <div class="modal-content">
+                    <h2>기종 선택</h2>
+                    <ul>
+                        <li><button class="modelBtn" onclick="selectModel('아이폰 X')">아이폰 X</button></li>
+                        <li><button class="modelBtn" onclick="selectModel('아이폰 XS')">아이폰 XS</button></li>
+                        <li><button class="modelBtn" onclick="selectModel('아이폰 11')">아이폰 11</button></li>
+                        <li><button class="modelBtn" onclick="selectModel('아이폰 12')">아이폰 12</button></li>
+                        <li><button class="modelBtn" onclick="selectModel('아이폰 13')">아이폰 13</button></li>
+                        <li><button class="modelBtn" onclick="selectModel('아이폰 13')">아이폰 14</button></li>
+                        <li><button class="modelBtn" onclick="selectModel('삼성 갤럭시 S2')">삼성 갤럭시 S20</button></li>
+                        <li><button class="modelBtn" onclick="selectModel('삼성 갤럭시 S3')">삼성 갤럭시 S21</button></li>
+                        <li><button class="modelBtn" onclick="selectModel('삼성 갤럭시 S4')">삼성 갤럭시 S22</button></li>
+                        <li><button class="modelBtn" onclick="selectModel('삼성 갤럭시 S5')">삼성 갤럭시 S23</button></li>
+                    </ul>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            //헤더 푸터 가져오기
+            function loadHTML(url, element) {
+                    const xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState === 4 && this.status === 200) {
+                            const content = this.responseText;
+                            element.innerHTML = content;
+
+                            const scriptTags = element.getElementsByTagName("script");
+                            for (var i = 0; i < scriptTags.length; i++) {
+                                eval(scriptTags[i].innerText);
+                            }
+                        }
+                    };
+                    xhttp.open("GET", url, true);
+                    xhttp.send();
+                }
+
+            document.addEventListener("DOMContentLoaded", function() {
+                const headerElement = document.querySelector("header");
+                loadHTML("../components/header.jsp", headerElement);
+
+                const footerElement = document.querySelector("footer");
+                loadHTML("../componentsfooter.jsp", footerElement);
+
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+                var tableRows = document.querySelectorAll("table tr");
+                
+                tableRows.forEach(function(row) {
+                    var tableCells = row.querySelectorAll("td");
+                    var selectedCell = null;
+
+                    tableCells.forEach(function(cell) {
+                    cell.addEventListener("click", function() {
+                        if (selectedCell) {
+                        // 이미 선택된 <td> 요소가 있는 경우 선택 해제
+                        selectedCell.classList.remove("selected");
+                        }
+                        
+                        // 현재 클릭한 <td> 요소 선택
+                        selectedCell = this;
+                        selectedCell.classList.add("selected");
+                    });
+                    });
+                });
+            });
+
+            function handleFileSelect(event, imageId) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+            var image = document.getElementById(imageId);
+            image.src = e.target.result;
+            };
+
+            reader.readAsDataURL(file);
+            }
+
+
+            function showModelPopup() {
+                var modal = document.getElementById("modelModal");
+                modal.style.display = "block";
+            }
+
+            function selectModel(model) {
+                var modelInput = document.getElementById("modelInput");
+                modelInput.value = model;
+
+                var modal = document.getElementById("modelModal");
+                modal.style.display = "none";
+            }
+
+            function registerBtn() {
+                const modelVal = document.querySelector("#modelInput").value;
+                if(modelVal===""){
+                    alert("모델명을 입력하세요.");
+                    return false;
+                }
+
+                alert("판매등록이 완료되었습니다.");
+                document.querySelector("#modelInput").value = "";
+            }
+
+            function marketPriceBtn(){
+                window.open("./marketPricePage.html", "_blank", "width=800,height=800");
+            }
+
+
+        </script>
+    </body>
+</html>
